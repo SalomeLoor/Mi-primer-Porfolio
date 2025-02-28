@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="icon" type="image/png" href="../imgs/icon.png">
+
+    <title>My PortFolio</title>
+  </head>
+
+  <body>
+    <main>
+      <header>
+        <section class="logo">
+          <img src="../imgs/icon.png" alt="" />
+          <div>
+            <h3>TulipCode</h3>
+            
+          </div>
+        </section>
+        <div class="botones">
+          <li class="listaHeader">
+            <a class="btn" href="./aboutMe.html" rel="noopener noreferrer">
+              About Me
+            </a>
+          </li>
+          <li class="listaHeader">
+            <a class="btn" href="./proyects.html" rel="noopener noreferrer">
+              My Proyects
+            </a>
+          </li>
+          <li id="open-modal" class="listaHeader">
+            <a class="btn" href="#" rel="noopener noreferrer"> Contact Me </a>
+          </li>
+        </div>
+      </header>
+      <section class="cuerpo">
+        <h1 class="tracking-out-contract">PortFolio</h1>
+        <h2>✨ 2022 --------- 2025 ✨</h2>
+      </section>
+    </main>
+    <div class="modal">
+      <button id="close-modal">X</button>
+      <div class="div-Form">
+
+        <form id="contact-form">
+          <h2 class="federo-regular H2" >Contact Me</h2>
+         <div class="input-group">
+           <input type="text" id="name" name="name" required/>
+           <label for="name">Nombre</label>
+         </div>
+         <div class="input-group">
+           <input type="email"  id="email" name="email"required/>
+           <label for="email">Email</label>
+         </div>
+         
+         <div class="input-group">
+           <textarea name="message" id="message" cols="30" rows="10" required></textarea>
+          <label for="message">Message</label>
+         </div>
+         
+         <div class="social">
+          <a href="https://wa.me/+593988861494" target="_blank"><img src="../imgs/whatsapp.png" alt="WhatsApp"></a>
+          <a href="https://www.linkedin.com/in/salome-loor-717587318" target="_blank"><img src="../imgs/linkedin.png" alt="Linkedin"></a>
+          <a href="https://t.me/+593988861494" target="_blank"><img src="../imgs/telegram.png" alt="Telegram"></a>
+        </div>
+
+          <input class="btn" id="Send" type="submit"></input>
+        </form>
+      </div>
+      <h4 class="mail-success federo-regular"> Email enviado correctamente ✨</h4>
+    </div>
+  </body>
+  <!--Script para el modal-->
+  <script src="./js/Modal.js"></script>
+  <!--Script para el servicio de email-->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "9taphLY0m8aElgZ4N",
+      });
+   })();
+</script>
+<script type="text/javascript">
+  
+  const mailSuccess = document.querySelector('.mail-success');
+  const form = document.getElementById('contact-form');
+  
+  window.onload = function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // these IDs from the previous steps
+          emailjs.sendForm('service_mhclhna','template_pg14qt9', this)
+              
+              .then(() => {
+                  console.log('SUCCESS!');
+                  mailSuccess.style.display = 'inline-flex';
+                  setTimeout(() => {
+                    mailSuccess.style.display = 'none';
+                  }, 3000);
+                  form.reset();
+              }, (error) => {
+                  console.log('FAILED...', error);
+              });
+      });
+  }
+</script>
+</html>

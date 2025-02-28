@@ -1,0 +1,454 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sofia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Federo&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+* a {
+  color: black;
+}
+:root {
+  --ColorPiel: #ffe6a5;
+  --colorNaranja: #fabc3f;
+  --colorNaranjaBajo: #fabc3fdb;
+  --colorNaranjaHover: #e9a216;
+  --colorNaranjaPastel: #ffbf61;
+  --colorBlack: black;
+  --colorAmarilli-Pastel: #fcf596;
+  --sombreado: 2px 3px 10px 1px rgba(0, 0, 0, 0.253);
+  --sombreado2: 4px 3px 1px 1px rgba(0, 0, 0, 0.253);
+  
+ 
+}
+.sofia-regular {
+  font-family: "Sofia", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.federo-regular {
+  font-family: "Federo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--ColorPiel);
+  background-repeat: no-repeat;
+  background-size: 100vw 120vh;
+  flex-direction: column;
+}
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  display: flex;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: left;
+}
+
+.Pestañas {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: left;
+}
+#lista {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  list-style: none;
+  padding: 2rem;
+  
+}
+.listaHeader {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.cuerpo {
+  height: 75vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem;
+}
+.cuerpo h1 {
+  font-size: 40px;
+  padding-left: 2.5rem;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.253);
+  border-bottom: 1.5px solid var(--colorBlack);
+}
+
+#sobre-mi {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#sobre-mi img {
+  margin: 2.5rem;
+  width: 350px;
+  height: 320px;
+  object-fit: cover;
+  box-shadow: var(--sombreado);
+  border-radius: 20px;
+}
+
+#texto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  /* border-bottom: 1.5px solid black;*/
+}
+#texto h1 {
+  width: 100%;
+  text-align: left;
+}
+#texto p {
+  width: 600px;
+  text-align: justify;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  font-family: "Federo", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  background-color: var(--colorNaranja);
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.253);
+}
+/*para que cambie de color los botones cuando el cursos esta sobre ellos*/
+.btn:hover {
+  background-color: var(--colorNaranjaHover);
+}
+
+.habilidades-blandas {
+  width: 100%;
+  height: 98.5vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.habilidades-blandas h2 {
+  font-size: 40px;
+  padding-left: 2.5rem;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.253);
+  margin-top: 2rem;
+}
+.h2-skills {
+  width: 50%;
+  margin-left: 2rem;
+  border-bottom: 1px solid var(--colorBlack);
+}
+.self-divs {
+  width: 450px;
+  height: 400px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 3.5rem;
+  padding: 2rem;
+  border: 1px solid var(--colorBlack);
+  border-radius: 10px;
+  box-shadow: 4px 3px 1px 1px rgba(0, 0, 0, 0.253);
+  background-color: var(--colorAmarilli-Pastel);
+  padding-right: 3rem;
+}
+.lista-habilidades {
+  display: flex;
+  justify-content: center;
+}
+
+.habilidades-dev {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 3.5rem;
+}
+.habilidades-dev h2 {
+  font-size: 40px;
+  padding-left: 2.5rem;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.253);
+  margin-top: 2rem;
+}
+.dev-skills {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 3rem;
+}
+.dev-divs {
+  width: 20%;
+  min-height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid var(--colorBlack);
+  border-radius: 10px;
+  box-shadow: 4px 3px 1px 1px rgba(0, 0, 0, 0.253);
+  background-color: var(--colorAmarilli-Pastel);
+}
+.dev-divs h3{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+
+}
+.dev-divs img {
+  width: 20px;
+  height: 20px;
+}
+.dev-li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  background-color: var(--colorNaranja);
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 3px 10px 1px rgba(0, 0, 0, 0.253);
+  gap: 1rem;
+  margin: 1rem;
+}
+.dev-li:hover {
+  background-color: var(--colorNaranjaHover);
+}
+.educacion {
+  /* border: 1px solid blue; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 2rem;
+  margin-bottom: 3rem;
+}
+.educacion h2 {
+  display: flex;
+  justify-content: left;
+  font-size: 40px;
+  padding-left: 1.5rem;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.253);
+}
+.div-educacion {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+}
+.imagenes {
+  width: 80%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: 2.5rem;
+  gap: 2rem;
+}
+.imagenes img {
+  width: 150px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: var(--sombreado2);
+}
+
+.scroll-edu {
+  width: 650px;
+  height: auto;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2.5rem;
+  margin: 3.5rem;
+  border: 1px groove var(--colorBlack);
+  background-color: var(--colorAmarilli-Pastel);
+  border-radius: 10px;
+  box-shadow: var(--sombreado2);
+}
+
+.scroll-edu::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+.scroll-edu::-webkit-scrollbar-thumb {
+  background-color: var(--colorNaranja);
+  border-radius: 10px;
+}
+
+#hijo-Certificaiones-Idiomas {
+  width: 650px;
+  height: auto;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+  padding: 2.5rem;
+  margin: 3.5rem;
+  border: 1px groove var(--colorBlack);
+  background-color: var(--colorAmarilli-Pastel);
+  border-radius: 10px;
+  box-shadow: var(--sombreado2);
+}
+#hijo-Certificaiones-Idiomas::-webkit-scrollbar {
+  width: 15px;
+  height: 15px;
+}
+#hijo-Certificaiones-Idiomas::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 10px;
+}
+
+.proyectos {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.proyectos h2 {
+  font-size: 40px;
+  padding-left: 2.5rem;
+  text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.253);
+  margin-top: 2rem;
+}
+.H3{
+  font-weight: 600;
+}
+
+/*Footer*/
+
+footer {
+  width: 100%;
+  height: auto;
+  background-image: url("/imgs/flowers_.jpeg");
+  border: 1px solid var(--colorNaranjaPastel);
+  border-radius: 30px 30px 0 0;
+  box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.253);
+  color: #fff;
+  padding: 40px 0;
+  text-align: center;
+  
+}
+
+/* Contenedor del Footer */
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around; 
+  align-items: center; 
+  width: 100%;
+  margin: auto;
+}
+
+/* Secciones del Footer */
+.footer-section {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  width: auto; 
+  min-width: 300px; 
+  margin: 20px;
+  padding: 20px;
+}
+
+
+.footer-section h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: 600;
+}
+
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  color: black;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #000;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color:var(--colorNaranja);
+}
+
+/* Íconos Sociales */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a img {
+  width: 30px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  background: var(--colorNaranjaPastel);
+  padding: 15px 0;
+  margin-top: 20px;
+  font-size: 14px;
+}
+.footer-bottom p{
+ color: black;
+}
