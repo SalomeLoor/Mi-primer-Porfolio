@@ -41,7 +41,6 @@ body {
 }
 main {
   width: 100%;
-  border: 1px solid blue;
 }
 header {
   width: 100%;
@@ -196,6 +195,10 @@ header ul {
   border-radius: 20px;
   gap: 2.5rem;
 }
+.educacion img{
+  width: 450px;
+  height: 450px;
+}
 .h2-skills{
   margin: 1rem;
   font-size: 2rem;
@@ -205,13 +208,20 @@ header ul {
 }
 .scroll-edu{
   width: 50%;
+  display: flex;
+  flex-direction: column;
   margin: .5rem;
-  padding: 1.5rem;
-  border-right: 1px dotted black;
-  
+  padding: 1.5rem;  
 }
 .scroll-edu h3{
   font-size: 1rem;
+}
+.scroll-edu img{
+  margin: .5rem;
+  padding: .3rem;
+  border-radius: 10px;
+  width: 90px;
+  height: 50px;
 }
 footer {
   background-image: url("/imgs/flowers_.jpeg");
@@ -220,7 +230,8 @@ footer {
   padding: 40px 0;
   text-align: center;
   margin-top: 5rem;
-  box-shadow: 0px 0px 9px 1px var(--colorBlack); 
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.606); 
+  border: 1px solid var(--colorNaranja);
 }
 .footer-container {
   display: flex;
@@ -292,7 +303,7 @@ footer {
     width: 100%;
   }
   #texto h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .habilidades-blandas{
     gap: 2rem;
@@ -303,7 +314,7 @@ footer {
     display: none;
   }
   .div-lista-habilidades h2{
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .lista-habilidades {
     width: 300px;
@@ -318,7 +329,7 @@ footer {
   }
   .H2{
     margin-bottom: 1rem;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
   .dev-skills {
     justify-content: center;
@@ -345,7 +356,7 @@ footer {
     font-size: 15px;
   }
   .h2-skills{
-    font-size: 1.9rem;
+    font-size: 1.5rem;
   }
   .educacion{
     flex-wrap: wrap;
@@ -353,12 +364,16 @@ footer {
     margin: 0.5rem;
     padding: 1.5rem;
   }
+  #ositos{
+    display: none;
+  }
   .scroll-edu{
     width: 350px;
-    gap: 1rem;
+    gap: .5rem;
     padding: 1rem 1rem 1rem 1rem;
     border-right: none;
   }
+  
   .scroll-edu h3{
     font-size: 16px;
   }
